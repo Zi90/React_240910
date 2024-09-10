@@ -1,0 +1,74 @@
+.boardList {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+.title{
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: transparent;
+    -webkit-background-clip: text;
+    margin-bottom: 30px;
+}
+h2 {
+    text-align: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: transparent;
+    -webkit-background-clip: text;
+    margin-bottom: 30px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+.subTitle{
+    background: linear-gradient(to right top, #12c2e975, #c471ed7a, #f64f5a8c);
+}
+.subTitle>th{
+    color: #764ba2;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+.center{
+    text-align: center;
+}
+th {
+    color: #333;
+}
+tr:nth-child(even) {
+    background-color: #F9F9F9;
+}
+tr:hover {
+    background: linear-gradient(to right, rgba(135, 207, 235, 0.452), rgba(255, 192, 203, 0.479));
+    color: #667eea;
+    font-weight: 700;
+}
+table {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+th:nth-child(1), td:nth-child(1) {
+    width: 3%;
+    word-break: break-word;
+}
+.textButton{
+    width: 150px;
+    height: 60px;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    /* border 그라데이션 - button */
+    border: 1px solid transparent;
+    border-radius: 20px;
+    background-image: linear-gradient(to right top, #12c2e975, #c471ed7a, #f64f5a8c);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+.textButton:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+}
+.textbutton:active {
+    transform: scale(0.95);
+}
