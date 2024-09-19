@@ -1,6 +1,7 @@
 import React from 'react';
 import { boardList } from '../data/data';
 import '../component/board-style.css';
+import { Link } from 'react-router-dom';
 
 const BoardList = () => {
     return (
@@ -11,7 +12,6 @@ const BoardList = () => {
                     <tr className='subTitle'>
                         <th>번호</th>
                         <th>제목</th>
-                        <th>내용</th>
                         <th>작성자</th>
                         <th>작성일</th>
                     </tr>
@@ -20,14 +20,14 @@ const BoardList = () => {
                     {boardList.map(b => (
                         <tr key={b.id}>
                             <td className='center'>{b.id}</td>
-                            <td>{b.title}</td>
-                            <td>{b.contents}</td>
+                            <td><Link to={`/detail/${b.id}`}>{b.title}</Link></td>
                             <td>{b.writer}</td>
-                            <td>{b.reg_date}</td>
+                            <td>{b.reg_date.substring(0, b.reg_date.indexOf("T"))}</td>
                         </tr>
                     ))}
                 </tbody>
             </table>
+                <Link to={`/register`}><button className='textButton'>글쓰기</button></Link>
         </div>
     );
 };

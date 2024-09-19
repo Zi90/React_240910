@@ -1,7 +1,10 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import BoardList from './BoardList';
+import BoardDetail from './BoardDetail';
 import '../component/board-style.css';
+import BoardRegister from './BoardRegister';
+import BoardModify from './BoardModify';
 
 const BoardHome = () => {
     return (
@@ -11,11 +14,11 @@ const BoardHome = () => {
                 <Routes>
                     <Route path='/' element={<BoardList/>}/>
                     <Route path='/list' element={<BoardList/>}/>
-                    <Route />
-                    <Route />
+                    <Route path="/detail/:id" element={<BoardDetail/>} />
+                    <Route path='/register' element={<BoardRegister/>}/>
+                    <Route path='/modify/:id' element={<BoardModify/>}/>
                 </Routes>
             </BrowserRouter>
-            <button className='textButton'>글쓰기</button>
         </div>
     );
 };
